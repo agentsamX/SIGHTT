@@ -47,6 +47,7 @@
 		AA2989252BAE1259003527DF /* SIGHTTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIGHTTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2989292BAE1259003527DF /* SIGHTTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIGHTTUITests.swift; sourceTree = "<group>"; };
 		AA29892B2BAE1259003527DF /* SIGHTTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIGHTTUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AA2989382BAE12A3003527DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		AA29890A2BAE1258003527DF /* SIGHTT */ = {
 			isa = PBXGroup;
 			children = (
+				AA2989382BAE12A3003527DF /* Info.plist */,
 				AA29890B2BAE1258003527DF /* SIGHTTApp.swift */,
 				AA29890D2BAE1258003527DF /* ContentView.swift */,
 				AA29890F2BAE1258003527DF /* Item.swift */,
@@ -433,6 +435,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SIGHTT/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -461,6 +464,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SIGHTT/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
