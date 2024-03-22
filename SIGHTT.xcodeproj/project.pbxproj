@@ -15,6 +15,8 @@
 		AA2989202BAE1259003527DF /* SIGHTTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29891F2BAE1259003527DF /* SIGHTTTests.swift */; };
 		AA29892A2BAE1259003527DF /* SIGHTTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2989292BAE1259003527DF /* SIGHTTUITests.swift */; };
 		AA29892C2BAE1259003527DF /* SIGHTTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29892B2BAE1259003527DF /* SIGHTTUITestsLaunchTests.swift */; };
+		AA46DF042BAE2F810099F1BE /* GCDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46DF032BAE2F810099F1BE /* GCDetailView.swift */; };
+		AA46DF062BAE2F9E0099F1BE /* GCListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46DF052BAE2F9E0099F1BE /* GCListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		AA2989292BAE1259003527DF /* SIGHTTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIGHTTUITests.swift; sourceTree = "<group>"; };
 		AA29892B2BAE1259003527DF /* SIGHTTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIGHTTUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AA2989382BAE12A3003527DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AA46DF032BAE2F810099F1BE /* GCDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDetailView.swift; sourceTree = "<group>"; };
+		AA46DF052BAE2F9E0099F1BE /* GCListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 				AA2989382BAE12A3003527DF /* Info.plist */,
 				AA29890B2BAE1258003527DF /* SIGHTTApp.swift */,
 				AA29890D2BAE1258003527DF /* ContentView.swift */,
+				AA46DF032BAE2F810099F1BE /* GCDetailView.swift */,
+				AA46DF052BAE2F9E0099F1BE /* GCListView.swift */,
 				AA29890F2BAE1258003527DF /* Item.swift */,
 				AA2989112BAE1259003527DF /* Assets.xcassets */,
 				AA2989162BAE1259003527DF /* SIGHTT.entitlements */,
@@ -265,8 +271,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA29890E2BAE1258003527DF /* ContentView.swift in Sources */,
+				AA46DF042BAE2F810099F1BE /* GCDetailView.swift in Sources */,
 				AA2989102BAE1258003527DF /* Item.swift in Sources */,
 				AA29890C2BAE1258003527DF /* SIGHTTApp.swift in Sources */,
+				AA46DF062BAE2F9E0099F1BE /* GCListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

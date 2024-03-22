@@ -7,19 +7,22 @@
 
 import SwiftUI
 import SwiftData
+import GameController
+
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
+    @State private var controllers:[GCController] = GCController.controllers()
 
     var body: some View {
         NavigationSplitView {
             List {
-                ForEach(items) { item in
+                ForEach(controllers, id: \.self) { controller in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        GCDetailView(controller: controller)
                     } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                        Text(controller.vendorName ?? "Unknown Controller")
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -27,8 +30,8 @@ struct ContentView: View {
             .navigationSplitViewColumnWidth(min: 180, ideal: 200)
             .toolbar {
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    Button(action: refreshControllers) {
+                        Label("Refresh Controllers", systemImage: "arrow.clockwise")
                     }
                 }
             }
@@ -37,11 +40,12 @@ struct ContentView: View {
         }
     }
 
-    private func addItem() {
+    private func refreshControllers() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+            let _ = print(controllers.count)
+            controllers = GCController.controllers()
         }
+       
     }
 
     private func deleteItems(offsets: IndexSet) {

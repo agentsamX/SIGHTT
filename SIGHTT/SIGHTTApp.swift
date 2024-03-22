@@ -28,5 +28,12 @@ struct SIGHTTApp: App {
             ContentView()
         }
         .modelContainer(sharedModelContainer)
+        .commands{
+            CommandMenu("Playlist")
+            {
+                Button("Add Current Settings") {}
+                    .keyboardShortcut("a",modifiers: [.command,.shift])
+            }
+        }
     }
 }
