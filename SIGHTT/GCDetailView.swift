@@ -11,16 +11,16 @@ import GameController
 struct GCDetailView: View {
     let controller : GCController
     var body: some View {
-        HStack
+        HStack(alignment: .top)
         {
             VStack(alignment: .leading){
                 Text("Name: " + (controller.vendorName ?? "Unknown Controller"))
                 Text("Input Profile: " + controller.physicalInputProfile.className)
             }
             
-            VStack(content: {
+            VStack{
                 
-            })
+            }
         }
     }
 }

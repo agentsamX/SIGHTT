@@ -8,16 +8,27 @@
 import SwiftUI
 import SwiftData
 import GameController
+import NotificationCenter
+
 
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
     @State private var controllers:[GCController] = GCController.controllers()
+    
 
     var body: some View {
         NavigationSplitView {
             List {
+                let observerCon =  NotificationCenter.default.addObserver(forName: NSNotification.Name.GCControllerDidConnect, object: nil,queue:nil){(note) in
+                    print("controller connected")
+                    controllers = GCController.controllers()
+                }
+                let observerDis =  NotificationCenter.default.addObserver(forName: NSNotification.Name.GCControllerDidDisconnect, object: nil,queue:nil){(note) in
+                    print("controller disconnected")
+                    controllers = GCController.controllers()
+                }
                 ForEach(controllers, id: \.self) { controller in
                     NavigationLink {
                         GCDetailView(controller: controller)
@@ -36,11 +47,11 @@ struct ContentView: View {
                 }
             }
         } detail: {
-            Text("Select an item")
+            Text("Select a Controller")
         }
     }
 
-    private func refreshControllers() {
+    private func refreshControllers(){
         withAnimation {
             let _ = print(controllers.count)
             controllers = GCController.controllers()
