@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AA096C372BAF8C1900C29777 /* StartStrengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA096C362BAF8C1900C29777 /* StartStrengthView.swift */; };
+		AA096C392BAF8EE900C29777 /* WeaponModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA096C382BAF8EE900C29777 /* WeaponModeView.swift */; };
+		AA096C3B2BAF917800C29777 /* SlopeModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA096C3A2BAF917800C29777 /* SlopeModeView.swift */; };
 		AA29890C2BAE1258003527DF /* SIGHTTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29890B2BAE1258003527DF /* SIGHTTApp.swift */; };
 		AA29890E2BAE1258003527DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29890D2BAE1258003527DF /* ContentView.swift */; };
 		AA2989102BAE1258003527DF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29890F2BAE1258003527DF /* Item.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		AA096C362BAF8C1900C29777 /* StartStrengthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartStrengthView.swift; sourceTree = "<group>"; };
+		AA096C382BAF8EE900C29777 /* WeaponModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponModeView.swift; sourceTree = "<group>"; };
+		AA096C3A2BAF917800C29777 /* SlopeModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlopeModeView.swift; sourceTree = "<group>"; };
 		AA2989082BAE1258003527DF /* SIGHTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIGHTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA29890B2BAE1258003527DF /* SIGHTTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIGHTTApp.swift; sourceTree = "<group>"; };
 		AA29890D2BAE1258003527DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				AA096C362BAF8C1900C29777 /* StartStrengthView.swift */,
+				AA096C382BAF8EE900C29777 /* WeaponModeView.swift */,
+				AA096C3A2BAF917800C29777 /* SlopeModeView.swift */,
 			);
 			path = HapticPanels;
 			sourceTree = "<group>";
@@ -282,8 +288,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA096C372BAF8C1900C29777 /* StartStrengthView.swift in Sources */,
+				AA096C3B2BAF917800C29777 /* SlopeModeView.swift in Sources */,
 				AA29890E2BAE1258003527DF /* ContentView.swift in Sources */,
 				AA46DF042BAE2F810099F1BE /* GCDetailView.swift in Sources */,
+				AA096C392BAF8EE900C29777 /* WeaponModeView.swift in Sources */,
 				AA2989102BAE1258003527DF /* Item.swift in Sources */,
 				AA29890C2BAE1258003527DF /* SIGHTTApp.swift in Sources */,
 				AA46DF062BAE2F9E0099F1BE /* GCListView.swift in Sources */,

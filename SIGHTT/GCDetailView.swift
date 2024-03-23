@@ -41,11 +41,13 @@ struct GCDetailView: View {
                     case .feedback:
                         StartStrengthView(controller: controller.physicalInputProfile as! GCDualSenseGamepad)
                     case .weapon:
-                        Text("Weapon Feedback Mode Selected")
+                        WeaponModeView(controller: controller.physicalInputProfile as!
+                            GCDualSenseGamepad)
                     case .vibration:
                         Text("Vibration Feedback Mode Selected")
                     case .slope:
-                        Text("Slope Feedback Mode Selected")
+                        SlopeModeView(controller: controller.physicalInputProfile as!
+                            GCDualSenseGamepad)
                     }
                }
             }
