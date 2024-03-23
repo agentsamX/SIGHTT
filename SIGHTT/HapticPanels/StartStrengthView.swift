@@ -29,6 +29,8 @@ struct StartStrengthView: View {
         })
         Text("R2 Resistance Strength: \(r2ResistStrength)")
             .foregroundColor(r2ResistStrengthChanged ? .red : .blue)
+        Divider()
+            .padding(.vertical)
         Slider(value: $l2StartResist, in:0...1,onEditingChanged: { editing in
             l2StartResistChanged=true
         })
@@ -40,6 +42,7 @@ struct StartStrengthView: View {
         Text("L2 Resistance Strength: \(l2ResistStrength)")
             .foregroundColor(l2ResistStrengthChanged ? .red : .blue)
         Divider()
+            .padding(.vertical)
         HStack(){
             Button(action: applyDSSettings) {
                 Text("Apply Settings")
@@ -48,6 +51,7 @@ struct StartStrengthView: View {
                 Text("Reset Settings")
             }
         }
+        .padding(.bottom)
     }
     
     func applyDSSettings(){

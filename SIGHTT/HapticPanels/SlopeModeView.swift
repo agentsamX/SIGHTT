@@ -51,6 +51,8 @@ struct SlopeModeView: View {
         })
         Text("R2 End Resistance Strength: \(r2EndResistStrength)")
             .foregroundColor(r2StartResistStrengthChanged ? .red : .blue)
+        Divider()
+            .padding(.vertical)
         Slider(value: $l2StartResist, in:0...1,onEditingChanged: { editing in
             l2StartResistChanged=true
         })
@@ -71,6 +73,7 @@ struct SlopeModeView: View {
         Text("L2 Resistance Strength: \(l2EndResistStrength)")
             .foregroundColor(l2EndResistStrengthChanged ? .red : .blue)
         Divider()
+            .padding(.vertical)
         HStack(){
             Button(action: applyDSSettings) {
                 Text("Apply Settings")
@@ -79,6 +82,7 @@ struct SlopeModeView: View {
                 Text("Reset Settings")
             }
         }
+        .padding(.bottom)
     }
     
     func applyDSSettings(){

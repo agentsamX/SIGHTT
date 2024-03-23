@@ -26,7 +26,7 @@ struct GCDetailView: View {
                 Text("Name: " + (controller.vendorName ?? "Unknown Controller"))
                 Text("Input Profile: " + controller.physicalInputProfile.className)
             }
-            
+            .padding(.all)
             VStack{
                 if(controller.physicalInputProfile.className==GCDualSenseGamepad.className()){
                     Picker("Feedback Mode", selection: $feedbackMode){
@@ -35,21 +35,24 @@ struct GCDetailView: View {
                         Text("Vibration").tag(HapticType.vibration)
                         Text("Slope Feedback").tag(HapticType.slope)
                     }
-                    switch feedbackMode {
-                    case .none:
-                        Text("No Feedback Mode Selected")
-                    case .feedback:
-                        StartStrengthView(controller: controller.physicalInputProfile as! GCDualSenseGamepad)
-                    case .weapon:
-                        WeaponModeView(controller: controller.physicalInputProfile as!
-                            GCDualSenseGamepad)
-                    case .vibration:
-                        Text("Vibration Feedback Mode Selected")
-                    case .slope:
-                        SlopeModeView(controller: controller.physicalInputProfile as!
-                            GCDualSenseGamepad)
+                    .padding([.top, .leading, .trailing])
+                    ScrollView{
+                        switch feedbackMode {
+                        case .none:
+                            Text("No Feedback Mode Selected")
+                        case .feedback:
+                            StartStrengthView(controller: controller.physicalInputProfile as! GCDualSenseGamepad)
+                        case .weapon:
+                            WeaponModeView(controller: controller.physicalInputProfile as!
+                                           GCDualSenseGamepad)
+                        case .vibration:
+                            Text("Vibration Feedback Mode Selected")
+                        case .slope:
+                            SlopeModeView(controller: controller.physicalInputProfile as!
+                                          GCDualSenseGamepad)
+                        }
                     }
-               }
+                }
             }
         }
     }
