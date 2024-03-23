@@ -21,11 +21,11 @@ struct ContentView: View {
     var body: some View {
         NavigationSplitView {
             List {
-                let observerCon =  NotificationCenter.default.addObserver(forName: NSNotification.Name.GCControllerDidConnect, object: nil,queue:nil){(note) in
+                let _ =  NotificationCenter.default.addObserver(forName: NSNotification.Name.GCControllerDidConnect, object: nil,queue:nil){(note) in
                     print("controller connected")
                     controllers = GCController.controllers()
                 }
-                let observerDis =  NotificationCenter.default.addObserver(forName: NSNotification.Name.GCControllerDidDisconnect, object: nil,queue:nil){(note) in
+                let _ =  NotificationCenter.default.addObserver(forName: NSNotification.Name.GCControllerDidDisconnect, object: nil,queue:nil){(note) in
                     print("controller disconnected")
                     controllers = GCController.controllers()
                 }

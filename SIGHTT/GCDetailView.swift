@@ -10,6 +10,15 @@ import GameController
 
 struct GCDetailView: View {
     let controller : GCController
+    
+    enum HapticType: String, CaseIterable, Identifiable {
+        case none, feedback, weapon, vibration, slope
+        var id: Self { self }
+    }
+    
+    @State private var feedbackMode: HapticType = .feedback
+
+    
     var body: some View {
         HStack(alignment: .top)
         {
@@ -19,7 +28,26 @@ struct GCDetailView: View {
             }
             
             VStack{
-                
+                if(controller.physicalInputProfile.className==GCDualSenseGamepad.className()){
+                    Picker("Feedback Mode", selection: $feedbackMode){
+                        Text("Simple Feedback").tag(HapticType.feedback)
+                        Text("Weapon Feedback").tag(HapticType.weapon)
+                        Text("Vibration").tag(HapticType.vibration)
+                        Text("Slope Feedback").tag(HapticType.slope)
+                    }
+                    switch feedbackMode {
+                    case .none:
+                        Text("No Feedback Mode Selected")
+                    case .feedback:
+                        StartStrengthView(controller: controller.physicalInputProfile as! GCDualSenseGamepad)
+                    case .weapon:
+                        Text("Weapon Feedback Mode Selected")
+                    case .vibration:
+                        Text("Vibration Feedback Mode Selected")
+                    case .slope:
+                        Text("Slope Feedback Mode Selected")
+                    }
+               }
             }
         }
     }

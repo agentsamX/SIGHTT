@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA096C372BAF8C1900C29777 /* StartStrengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA096C362BAF8C1900C29777 /* StartStrengthView.swift */; };
 		AA29890C2BAE1258003527DF /* SIGHTTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29890B2BAE1258003527DF /* SIGHTTApp.swift */; };
 		AA29890E2BAE1258003527DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29890D2BAE1258003527DF /* ContentView.swift */; };
 		AA2989102BAE1258003527DF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29890F2BAE1258003527DF /* Item.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA096C362BAF8C1900C29777 /* StartStrengthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartStrengthView.swift; sourceTree = "<group>"; };
 		AA2989082BAE1258003527DF /* SIGHTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIGHTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA29890B2BAE1258003527DF /* SIGHTTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIGHTTApp.swift; sourceTree = "<group>"; };
 		AA29890D2BAE1258003527DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA096C352BAF8BF400C29777 /* HapticPanels */ = {
+			isa = PBXGroup;
+			children = (
+				AA096C362BAF8C1900C29777 /* StartStrengthView.swift */,
+			);
+			path = HapticPanels;
+			sourceTree = "<group>";
+		};
 		AA2988FF2BAE1258003527DF = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +112,7 @@
 		AA29890A2BAE1258003527DF /* SIGHTT */ = {
 			isa = PBXGroup;
 			children = (
+				AA096C352BAF8BF400C29777 /* HapticPanels */,
 				AA2989382BAE12A3003527DF /* Info.plist */,
 				AA29890B2BAE1258003527DF /* SIGHTTApp.swift */,
 				AA29890D2BAE1258003527DF /* ContentView.swift */,
@@ -270,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA096C372BAF8C1900C29777 /* StartStrengthView.swift in Sources */,
 				AA29890E2BAE1258003527DF /* ContentView.swift in Sources */,
 				AA46DF042BAE2F810099F1BE /* GCDetailView.swift in Sources */,
 				AA2989102BAE1258003527DF /* Item.swift in Sources */,
