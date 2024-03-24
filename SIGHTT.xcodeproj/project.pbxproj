@@ -20,6 +20,10 @@
 		AA29892C2BAE1259003527DF /* SIGHTTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29892B2BAE1259003527DF /* SIGHTTUITestsLaunchTests.swift */; };
 		AA46DF042BAE2F810099F1BE /* GCDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46DF032BAE2F810099F1BE /* GCDetailView.swift */; };
 		AA46DF062BAE2F9E0099F1BE /* GCListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46DF052BAE2F9E0099F1BE /* GCListView.swift */; };
+		AA87CF482BB0ACEF00964C3A /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = AA87CF472BB0ACEF00964C3A /* Sliders */; };
+		AA87CF4E2BB0ADC200964C3A /* VibrationModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87CF4D2BB0ADC200964C3A /* VibrationModeView.swift */; };
+		AA87CF502BB0B37E00964C3A /* PositionalVibrationModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87CF4F2BB0B37E00964C3A /* PositionalVibrationModeView.swift */; };
+		AA87CF542BB0C5EE00964C3A /* PositionalFeedbackModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87CF532BB0C5EE00964C3A /* PositionalFeedbackModeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,9 @@
 		AA2989382BAE12A3003527DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AA46DF032BAE2F810099F1BE /* GCDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDetailView.swift; sourceTree = "<group>"; };
 		AA46DF052BAE2F9E0099F1BE /* GCListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCListView.swift; sourceTree = "<group>"; };
+		AA87CF4D2BB0ADC200964C3A /* VibrationModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationModeView.swift; sourceTree = "<group>"; };
+		AA87CF4F2BB0B37E00964C3A /* PositionalVibrationModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionalVibrationModeView.swift; sourceTree = "<group>"; };
+		AA87CF532BB0C5EE00964C3A /* PositionalFeedbackModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionalFeedbackModeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA87CF482BB0ACEF00964C3A /* Sliders in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +99,9 @@
 				AA096C362BAF8C1900C29777 /* StartStrengthView.swift */,
 				AA096C382BAF8EE900C29777 /* WeaponModeView.swift */,
 				AA096C3A2BAF917800C29777 /* SlopeModeView.swift */,
+				AA87CF4D2BB0ADC200964C3A /* VibrationModeView.swift */,
+				AA87CF4F2BB0B37E00964C3A /* PositionalVibrationModeView.swift */,
+				AA87CF532BB0C5EE00964C3A /* PositionalFeedbackModeView.swift */,
 			);
 			path = HapticPanels;
 			sourceTree = "<group>";
@@ -173,6 +184,9 @@
 			dependencies = (
 			);
 			name = SIGHTT;
+			packageProductDependencies = (
+				AA87CF472BB0ACEF00964C3A /* Sliders */,
+			);
 			productName = SIGHTT;
 			productReference = AA2989082BAE1258003527DF /* SIGHTT.app */;
 			productType = "com.apple.product-type.application";
@@ -245,6 +259,9 @@
 				Base,
 			);
 			mainGroup = AA2988FF2BAE1258003527DF;
+			packageReferences = (
+				AA87CF462BB0ACEF00964C3A /* XCRemoteSwiftPackageReference "swiftui-sliders" */,
+			);
 			productRefGroup = AA2989092BAE1258003527DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -287,11 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA87CF542BB0C5EE00964C3A /* PositionalFeedbackModeView.swift in Sources */,
 				AA096C372BAF8C1900C29777 /* StartStrengthView.swift in Sources */,
 				AA096C3B2BAF917800C29777 /* SlopeModeView.swift in Sources */,
 				AA29890E2BAE1258003527DF /* ContentView.swift in Sources */,
 				AA46DF042BAE2F810099F1BE /* GCDetailView.swift in Sources */,
+				AA87CF4E2BB0ADC200964C3A /* VibrationModeView.swift in Sources */,
 				AA096C392BAF8EE900C29777 /* WeaponModeView.swift in Sources */,
+				AA87CF502BB0B37E00964C3A /* PositionalVibrationModeView.swift in Sources */,
 				AA2989102BAE1258003527DF /* Item.swift in Sources */,
 				AA29890C2BAE1258003527DF /* SIGHTTApp.swift in Sources */,
 				AA46DF062BAE2F9E0099F1BE /* GCListView.swift in Sources */,
@@ -619,6 +639,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA87CF462BB0ACEF00964C3A /* XCRemoteSwiftPackageReference "swiftui-sliders" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:spacenation/swiftui-sliders.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA87CF472BB0ACEF00964C3A /* Sliders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA87CF462BB0ACEF00964C3A /* XCRemoteSwiftPackageReference "swiftui-sliders" */;
+			productName = Sliders;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA2989002BAE1258003527DF /* Project object */;
 }

@@ -12,7 +12,7 @@ struct GCDetailView: View {
     let controller : GCController
     
     enum HapticType: String, CaseIterable, Identifiable {
-        case none, feedback, weapon, vibration, slope
+        case none, feedback, weapon, vibration, slope, feedbackPositional, vibrationPositional
         var id: Self { self }
     }
     
@@ -34,6 +34,8 @@ struct GCDetailView: View {
                         Text("Weapon Feedback").tag(HapticType.weapon)
                         Text("Vibration").tag(HapticType.vibration)
                         Text("Slope Feedback").tag(HapticType.slope)
+                        Text("Positional Vibration").tag(HapticType.vibrationPositional)
+                        Text("Feedback Positional").tag(HapticType.feedbackPositional)
                     }
                     .padding([.top, .leading, .trailing])
                     ScrollView{
@@ -43,13 +45,15 @@ struct GCDetailView: View {
                         case .feedback:
                             StartStrengthView(controller: controller.physicalInputProfile as! GCDualSenseGamepad)
                         case .weapon:
-                            WeaponModeView(controller: controller.physicalInputProfile as!
-                                           GCDualSenseGamepad)
+                            WeaponModeView(controller: controller.physicalInputProfile as! GCDualSenseGamepad)
                         case .vibration:
-                            Text("Vibration Feedback Mode Selected")
+                            VibrationModeView(controller: controller.physicalInputProfile as! GCDualSenseGamepad)
                         case .slope:
-                            SlopeModeView(controller: controller.physicalInputProfile as!
-                                          GCDualSenseGamepad)
+                            SlopeModeView(controller: controller.physicalInputProfile as! GCDualSenseGamepad)
+                        case .feedbackPositional:
+                            PositionalFeedbackModeView(controller: controller.physicalInputProfile as! GCDualSenseGamepad)
+                        case .vibrationPositional:
+                            PositionalVibrationModeView(controller: controller.physicalInputProfile as! GCDualSenseGamepad)
                         }
                     }
                 }
