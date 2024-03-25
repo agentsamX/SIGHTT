@@ -12,7 +12,6 @@
 		AA096C3B2BAF917800C29777 /* SlopeModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA096C3A2BAF917800C29777 /* SlopeModeView.swift */; };
 		AA29890C2BAE1258003527DF /* SIGHTTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29890B2BAE1258003527DF /* SIGHTTApp.swift */; };
 		AA29890E2BAE1258003527DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29890D2BAE1258003527DF /* ContentView.swift */; };
-		AA2989102BAE1258003527DF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29890F2BAE1258003527DF /* Item.swift */; };
 		AA2989122BAE1259003527DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA2989112BAE1259003527DF /* Assets.xcassets */; };
 		AA2989152BAE1259003527DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA2989142BAE1259003527DF /* Preview Assets.xcassets */; };
 		AA2989202BAE1259003527DF /* SIGHTTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29891F2BAE1259003527DF /* SIGHTTTests.swift */; };
@@ -24,6 +23,9 @@
 		AA87CF4E2BB0ADC200964C3A /* VibrationModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87CF4D2BB0ADC200964C3A /* VibrationModeView.swift */; };
 		AA87CF502BB0B37E00964C3A /* PositionalVibrationModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87CF4F2BB0B37E00964C3A /* PositionalVibrationModeView.swift */; };
 		AA87CF542BB0C5EE00964C3A /* PositionalFeedbackModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87CF532BB0C5EE00964C3A /* PositionalFeedbackModeView.swift */; };
+		AA87CF562BB0CD7D00964C3A /* PlaylistManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87CF552BB0CD7D00964C3A /* PlaylistManagerView.swift */; };
+		AA87CF582BB1085200964C3A /* PlaylistFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87CF572BB1085200964C3A /* PlaylistFile.swift */; };
+		AA87CF5C2BB1186E00964C3A /* PlaylistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87CF5B2BB1186E00964C3A /* PlaylistManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,6 @@
 		AA2989082BAE1258003527DF /* SIGHTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIGHTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA29890B2BAE1258003527DF /* SIGHTTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIGHTTApp.swift; sourceTree = "<group>"; };
 		AA29890D2BAE1258003527DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AA29890F2BAE1258003527DF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		AA2989112BAE1259003527DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA2989142BAE1259003527DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AA2989162BAE1259003527DF /* SIGHTT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SIGHTT.entitlements; sourceTree = "<group>"; };
@@ -65,6 +66,9 @@
 		AA87CF4D2BB0ADC200964C3A /* VibrationModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationModeView.swift; sourceTree = "<group>"; };
 		AA87CF4F2BB0B37E00964C3A /* PositionalVibrationModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionalVibrationModeView.swift; sourceTree = "<group>"; };
 		AA87CF532BB0C5EE00964C3A /* PositionalFeedbackModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionalFeedbackModeView.swift; sourceTree = "<group>"; };
+		AA87CF552BB0CD7D00964C3A /* PlaylistManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistManagerView.swift; sourceTree = "<group>"; };
+		AA87CF572BB1085200964C3A /* PlaylistFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistFile.swift; sourceTree = "<group>"; };
+		AA87CF5B2BB1186E00964C3A /* PlaylistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,16 +133,18 @@
 		AA29890A2BAE1258003527DF /* SIGHTT */ = {
 			isa = PBXGroup;
 			children = (
-				AA096C352BAF8BF400C29777 /* HapticPanels */,
 				AA2989382BAE12A3003527DF /* Info.plist */,
+				AA096C352BAF8BF400C29777 /* HapticPanels */,
 				AA29890B2BAE1258003527DF /* SIGHTTApp.swift */,
 				AA29890D2BAE1258003527DF /* ContentView.swift */,
 				AA46DF032BAE2F810099F1BE /* GCDetailView.swift */,
 				AA46DF052BAE2F9E0099F1BE /* GCListView.swift */,
-				AA29890F2BAE1258003527DF /* Item.swift */,
+				AA87CF552BB0CD7D00964C3A /* PlaylistManagerView.swift */,
 				AA2989112BAE1259003527DF /* Assets.xcassets */,
 				AA2989162BAE1259003527DF /* SIGHTT.entitlements */,
 				AA2989132BAE1259003527DF /* Preview Content */,
+				AA87CF572BB1085200964C3A /* PlaylistFile.swift */,
+				AA87CF5B2BB1186E00964C3A /* PlaylistManager.swift */,
 			);
 			path = SIGHTT;
 			sourceTree = "<group>";
@@ -304,15 +310,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA87CF562BB0CD7D00964C3A /* PlaylistManagerView.swift in Sources */,
 				AA87CF542BB0C5EE00964C3A /* PositionalFeedbackModeView.swift in Sources */,
 				AA096C372BAF8C1900C29777 /* StartStrengthView.swift in Sources */,
+				AA87CF582BB1085200964C3A /* PlaylistFile.swift in Sources */,
 				AA096C3B2BAF917800C29777 /* SlopeModeView.swift in Sources */,
 				AA29890E2BAE1258003527DF /* ContentView.swift in Sources */,
 				AA46DF042BAE2F810099F1BE /* GCDetailView.swift in Sources */,
 				AA87CF4E2BB0ADC200964C3A /* VibrationModeView.swift in Sources */,
+				AA87CF5C2BB1186E00964C3A /* PlaylistManager.swift in Sources */,
 				AA096C392BAF8EE900C29777 /* WeaponModeView.swift in Sources */,
 				AA87CF502BB0B37E00964C3A /* PositionalVibrationModeView.swift in Sources */,
-				AA2989102BAE1258003527DF /* Item.swift in Sources */,
 				AA29890C2BAE1258003527DF /* SIGHTTApp.swift in Sources */,
 				AA46DF062BAE2F9E0099F1BE /* GCListView.swift in Sources */,
 			);

@@ -7,33 +7,37 @@
 
 import SwiftUI
 import SwiftData
+import UniformTypeIdentifiers
 
 @main
 struct SIGHTTApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(sharedModelContainer)
+        .defaultSize(width: 1200, height: 800)
         .commands{
             CommandMenu("Playlist")
             {
                 Button("Add Current Settings") {}
                     .keyboardShortcut("a",modifiers: [.command,.shift])
+                Button("Print Playlist Count") {
+                    PlaylistManager.shared.printCount()
+                }
+                Button("Load Playlist File"){
+                    let panel = NSOpenPanel()
+                    panel.allowsMultipleSelection=false
+                    panel.canChooseDirectories=false
+                    panel.allowedContentTypes=[UTType.json]
+                    if panel.runModal() == .OK {
+                        var filename = panel.url?.lastPathComponent ?? "<none>"
+                    }
+                }
             }
+        }
+        Window("Playlist Manager", id:"playlist-manager")
+        {
+            PlaylistManagerView()
         }
     }
 }

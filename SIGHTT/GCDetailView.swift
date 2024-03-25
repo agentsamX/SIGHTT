@@ -8,13 +8,13 @@
 import SwiftUI
 import GameController
 
+enum HapticType: String, CaseIterable, Identifiable,Codable {
+    case none, feedback, weapon, vibration, slope, feedbackPositional, vibrationPositional
+    var id: Self { self }
+}
+
 struct GCDetailView: View {
     let controller : GCController
-    
-    enum HapticType: String, CaseIterable, Identifiable {
-        case none, feedback, weapon, vibration, slope, feedbackPositional, vibrationPositional
-        var id: Self { self }
-    }
     
     @State private var feedbackMode: HapticType = .feedback
 

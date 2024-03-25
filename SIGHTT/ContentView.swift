@@ -13,8 +13,6 @@ import NotificationCenter
 
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
     @State private var controllers:[GCController] = GCController.controllers()
     
 
@@ -36,7 +34,6 @@ struct ContentView: View {
                         Text(controller.vendorName ?? "Unknown Controller")
                     }
                 }
-                .onDelete(perform: deleteItems)
             }
             .navigationSplitViewColumnWidth(min: 180, ideal: 200)
             .toolbar {
@@ -58,17 +55,8 @@ struct ContentView: View {
         }
        
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
-    }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
