@@ -21,7 +21,13 @@ class PlaylistManager{
         
     }
     func saveJSON(location: URL){
+        let json = try? JSONEncoder().encode(playlist.list)
         
+        do {
+            try json!.write(to: location)
+        } catch {
+            print("Failed to write JSON data: \(error.localizedDescription)")
+        }
     }
     func printCount(){
         print("There are \(playlist.list.count) items in the playlist")
