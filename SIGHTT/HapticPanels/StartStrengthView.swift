@@ -47,8 +47,8 @@ struct StartStrengthView: View {
             Button(action: applyDSSettings) {
                 Text("Apply Settings")
             }
-            Button(action: resetDSSettings) {
-                Text("Reset Settings")
+            Button(action: addToPlaylist) {
+                Text("Add To Playlist")
             }
         }
         .padding(.bottom)
@@ -63,8 +63,8 @@ struct StartStrengthView: View {
         controller.leftTrigger.setModeFeedbackWithStartPosition(l2StartResist, resistiveStrength: l2ResistStrength)
         controller.rightTrigger.setModeFeedbackWithStartPosition(r2StartResist, resistiveStrength: r2ResistStrength)        
     }
-    func resetDSSettings(){
-        
+    func addToPlaylist(){
+        PlaylistManager.shared.addItem(item: PlaylistItem(hapticModeL: .feedback, hapticModeR: .feedback, hapticValuesL:[l2StartResist,l2ResistStrength], hapticValuesR:[r2StartResist,r2ResistStrength]))
     }
 }
 

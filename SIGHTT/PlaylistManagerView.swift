@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct PlaylistManagerView: View {
+    @ObservedObject var playlist = PlaylistManager.shared.playlist
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView{
+            ForEach(PlaylistManager.shared.playlist.list){item in
+                HStack{
+                    Text("This is an item")
+                    Button("Remove"){
+                        PlaylistManager.shared.playlist.list.removeAll(where: {$0.id == item.id})
+                    }
+                }
+            }
+        }
     }
 }
 

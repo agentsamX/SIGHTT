@@ -7,22 +7,23 @@
 
 import Foundation
 
-class PlaylistManager {
+class PlaylistManager{
     static let shared = PlaylistManager()
+    let fileManager = FileManager.default
     var playlist: Playlist = Playlist()
 
     private init() { }
     
-    func addItem(item: PlaylistItem)
-    {
+    func addItem(item: PlaylistItem){
         playlist.list.append(item)
     }
-    func loadJSON()
-    {
+    func loadJSON(file: String){
         
     }
-    func printCount()
-    {
+    func saveJSON(location: URL){
+        
+    }
+    func printCount(){
         print("There are \(playlist.list.count) items in the playlist")
     }
 }
