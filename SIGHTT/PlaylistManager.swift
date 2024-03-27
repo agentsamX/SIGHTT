@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class PlaylistManager{
     static let shared = PlaylistManager()
@@ -17,8 +18,22 @@ class PlaylistManager{
     func addItem(item: PlaylistItem){
         playlist.list.append(item)
     }
-    func loadJSON(file: String){
-        
+    func loadJSON(file: URL){
+        do{
+            let json = try String(contentsOf: file).data(using: .utf8)!
+            let decoder = JSONDecoder()
+            let newList = try decoder.decode([PlaylistItem].self, from: json)
+            playlist.list=newList
+        } catch {
+            let alert = NSAlert()
+            alert.messageText = "Warning"
+            alert.icon = NSImage(named: NSImage.cautionName)
+            alert.informativeText = "JSON file is invalid"
+            alert.addButton(withTitle: "OK")
+            alert.alertStyle = .warning
+            if (alert.runModal() == NSApplication.ModalResponse.alertFirstButtonReturn){}
+            return
+        }
     }
     func saveJSON(location: URL){
         let json = try? JSONEncoder().encode(playlist.list)

@@ -28,9 +28,12 @@ struct SIGHTTApp: App {
                     panel.allowsMultipleSelection=false
                     panel.canChooseDirectories=false
                     panel.allowedContentTypes=[UTType.json]
-                    if panel.runModal() == .OK {
-                        let filename = panel.url?.lastPathComponent ?? "<none>"
-                        PlaylistManager.shared.loadJSON(file: filename)
+                    panel.begin { (result: NSApplication.ModalResponse)-> Void in
+                        if result == NSApplication.ModalResponse.OK {
+                            if let panelURL = panel.url {
+                                PlaylistManager.shared.loadJSON(file: panelURL)
+                            }
+                        }
                     }
                 }
                 Button("Save Playlist File"){
