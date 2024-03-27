@@ -61,7 +61,7 @@ struct PositionalFeedbackModeView: View {
     }
     
     func addToPlaylist(){
-        
+        PlaylistManager.shared.addItem(item: PlaylistItem(hapticModeL: .feedbackPositional, hapticModeR: .feedbackPositional,hapticValuesL: [l2PositionalStrengths[0].value,l2PositionalStrengths[1].value,l2PositionalStrengths[2].value,l2PositionalStrengths[3].value,l2PositionalStrengths[4].value,l2PositionalStrengths[5].value,l2PositionalStrengths[6].value,l2PositionalStrengths[7].value,l2PositionalStrengths[8].value,l2PositionalStrengths[9].value],hapticValuesR: [r2PositionalStrengths[0].value,r2PositionalStrengths[1].value,r2PositionalStrengths[2].value,r2PositionalStrengths[3].value,r2PositionalStrengths[4].value,r2PositionalStrengths[5].value,r2PositionalStrengths[6].value,r2PositionalStrengths[7].value,r2PositionalStrengths[8].value,r2PositionalStrengths[9].value]))
     }
 }
 

@@ -104,7 +104,7 @@ struct SlopeModeView: View {
     }
     func addToPlaylist()
     {
-        PlaylistManager.shared.addItem(item: PlaylistItem(hapticModeL: .weapon, hapticModeR: .weapon, hapticValuesL:[l2StartResist,l2EndResist,l2StartResistStrength,l2EndResistStrength], hapticValuesR:[r2StartResist,r2EndResist,r2StartResistStrength,r2EndResistStrength]))
+        PlaylistManager.shared.addItem(item: PlaylistItem(hapticModeL: .slope, hapticModeR: .slope, hapticValuesL:[l2StartResist,l2EndResist,l2StartResistStrength,l2EndResistStrength], hapticValuesR:[r2StartResist,r2EndResist,r2StartResistStrength,r2EndResistStrength]))
     }
 }
 

@@ -82,7 +82,7 @@ struct PositionalVibrationModeView: View {
     }
     
     func addToPlaylist(){
-        
+        PlaylistManager.shared.addItem(item: PlaylistItem(hapticModeL: .vibrationPositional, hapticModeR: .vibrationPositional,hapticValuesL: [l2PositionalAmplitudes[0].value,l2PositionalAmplitudes[1].value,l2PositionalAmplitudes[2].value,l2PositionalAmplitudes[3].value,l2PositionalAmplitudes[4].value,l2PositionalAmplitudes[5].value,l2PositionalAmplitudes[6].value,l2PositionalAmplitudes[7].value,l2PositionalAmplitudes[8].value,l2PositionalAmplitudes[9].value,l2VibrationFrequency],hapticValuesR: [r2PositionalAmplitudes[0].value,r2PositionalAmplitudes[1].value,r2PositionalAmplitudes[2].value,r2PositionalAmplitudes[3].value,r2PositionalAmplitudes[4].value,r2PositionalAmplitudes[5].value,r2PositionalAmplitudes[6].value,r2PositionalAmplitudes[7].value,r2PositionalAmplitudes[8].value,r2PositionalAmplitudes[9].value,r2VibrationFrequency]))
     }
     
 }

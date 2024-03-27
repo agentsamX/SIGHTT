@@ -81,7 +81,7 @@ struct VibrationModeView: View {
         controller.rightTrigger.setModeVibrationWithStartPosition(r2StartVibration, amplitude: r2VibrationAmplitude, frequency: r2VibrationFrequency)
     }
     func addToPlaylist(){
-
+        PlaylistManager.shared.addItem(item: PlaylistItem(hapticModeL: .vibration, hapticModeR: .vibration,hapticValuesL: [l2StartVibration,l2VibrationAmplitude,l2VibrationFrequency],hapticValuesR: [r2StartVibration,r2VibrationAmplitude,r2VibrationFrequency]))
     }
 }
 
