@@ -78,8 +78,8 @@ struct SlopeModeView: View {
             Button(action: applyDSSettings) {
                 Text("Apply Settings")
             }
-            Button(action: resetDSSettings) {
-                Text("Reset Settings")
+            Button(action: addToPlaylist) {
+                Text("Add To Playlist")
             }
         }
         .padding(.bottom)
@@ -102,9 +102,9 @@ struct SlopeModeView: View {
             controller.rightTrigger.setModeSlopeFeedback(startPosition: r2StartResist, endPosition: r2EndResist, startStrength: r2StartResistStrength, endStrength: r2EndResistStrength)
         }
     }
-    func resetDSSettings()
+    func addToPlaylist()
     {
-        
+        PlaylistManager.shared.addItem(item: PlaylistItem(hapticModeL: .weapon, hapticModeR: .weapon, hapticValuesL:[l2StartResist,l2EndResist,l2StartResistStrength,l2EndResistStrength], hapticValuesR:[r2StartResist,r2EndResist,r2StartResistStrength,r2EndResistStrength]))
     }
 }
 

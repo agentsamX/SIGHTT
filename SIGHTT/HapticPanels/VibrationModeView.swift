@@ -62,8 +62,8 @@ struct VibrationModeView: View {
             Button(action: applyDSSettings) {
                 Text("Apply Settings")
             }
-            Button(action: resetDSSettings) {
-                Text("Reset Settings")
+            Button(action: addToPlaylist) {
+                Text("Add To Playlist")
             }
         }
         .padding(.bottom)
@@ -80,7 +80,7 @@ struct VibrationModeView: View {
         controller.leftTrigger.setModeVibrationWithStartPosition(l2StartVibration, amplitude: l2VibrationAmplitude, frequency: l2VibrationFrequency)
         controller.rightTrigger.setModeVibrationWithStartPosition(r2StartVibration, amplitude: r2VibrationAmplitude, frequency: r2VibrationFrequency)
     }
-    func resetDSSettings(){
+    func addToPlaylist(){
 
     }
 }

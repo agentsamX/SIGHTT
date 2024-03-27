@@ -47,8 +47,8 @@ struct PositionalFeedbackModeView: View {
             Button(action: applyDSSettings) {
                 Text("Apply Settings")
             }
-            Button(action: resetDSSettings) {
-                Text("Reset Settings")
+            Button(action: addToPlaylist) {
+                Text("Add To Playlist")
             }
         }
         .padding(.bottom)
@@ -60,7 +60,7 @@ struct PositionalFeedbackModeView: View {
         controller.leftTrigger.setModeFeedback(resistiveStrengths: GCDualSenseAdaptiveTrigger.PositionalResistiveStrengths(values: (l2PositionalStrengths[0].value,l2PositionalStrengths[1].value,l2PositionalStrengths[2].value,l2PositionalStrengths[3].value,l2PositionalStrengths[4].value,l2PositionalStrengths[5].value,l2PositionalStrengths[6].value,l2PositionalStrengths[7].value,l2PositionalStrengths[8].value,l2PositionalStrengths[9].value)))
     }
     
-    func resetDSSettings(){
+    func addToPlaylist(){
         
     }
 }

@@ -62,8 +62,8 @@ struct WeaponModeView: View {
             Button(action: applyDSSettings) {
                 Text("Apply Settings")
             }
-            Button(action: resetDSSettings) {
-                Text("Reset Settings")
+            Button(action: addToPlaylist) {
+                Text("Add To Playlist")
             }
         }
         .padding(.bottom)
@@ -84,8 +84,8 @@ struct WeaponModeView: View {
             controller.rightTrigger.setModeWeaponWithStartPosition(r2StartResist, endPosition: r2EndResist, resistiveStrength: r2ResistStrength)
         }
     }
-    func resetDSSettings(){
-
+    func addToPlaylist(){
+        PlaylistManager.shared.addItem(item: PlaylistItem(hapticModeL: .weapon, hapticModeR: .weapon, hapticValuesL:[l2StartResist,l2EndResist,l2ResistStrength], hapticValuesR:[r2StartResist,r2EndResist,r2ResistStrength]))
     }
 }
 

@@ -68,8 +68,8 @@ struct PositionalVibrationModeView: View {
             Button(action: applyDSSettings) {
                 Text("Apply Settings")
             }
-            Button(action: resetDSSettings) {
-                Text("Reset Settings")
+            Button(action: addToPlaylist) {
+                Text("Add To Playlist")
             }
         }
         .padding(.bottom)
@@ -81,7 +81,7 @@ struct PositionalVibrationModeView: View {
         controller.leftTrigger.setModeVibration(amplitudes: GCDualSenseAdaptiveTrigger.PositionalAmplitudes(values: (l2PositionalAmplitudes[0].value,l2PositionalAmplitudes[1].value,l2PositionalAmplitudes[2].value,l2PositionalAmplitudes[3].value,l2PositionalAmplitudes[4].value,l2PositionalAmplitudes[5].value,l2PositionalAmplitudes[6].value,l2PositionalAmplitudes[7].value,l2PositionalAmplitudes[8].value,l2PositionalAmplitudes[9].value)), frequency: l2VibrationFrequency)
     }
     
-    func resetDSSettings(){
+    func addToPlaylist(){
         
     }
     
