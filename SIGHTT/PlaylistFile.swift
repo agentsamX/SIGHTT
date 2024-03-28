@@ -9,7 +9,7 @@ import Foundation
 import GameController
 
 enum ItemMode: String, CaseIterable, Identifiable,Codable {
-    case onTimer, onProgramInput, onControllerInput
+    case onTimer, onControllerInput
     var id: Self { self }
 }
 
@@ -28,10 +28,44 @@ class Playlist: ObservableObject{
         try container.encode(list, forKey: .list)
     }
     init(){}*/
-    func startPlay(){
-        
+    func playList(){
+        if(activeController==nil){return}
+        if(isPlaying){
+            playIndex += 1
+            if(playIndex>=list.count){
+                if(isLooping){
+                    playIndex=0
+                }
+                else{
+                    isPlaying=false
+                    return
+                }
+            }
+            list[playIndex].play(controller: activeController!)
+            switch list[playIndex].itemMode{
+            case .onTimer:
+                timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(list[playIndex].timer), repeats: false) { timer in
+                    self.playList()
+                }
+            case .onControllerInput:
+                print("feature not yet implemented 🤪")
+            }
+            
+        } else {
+            playIndex = -1
+            isPlaying = true
+            playList()
+        }
+    }
+    func stopList(){
+        timer?.invalidate()
+        isPlaying=false
     }
     var id = UUID()
+    var isPlaying = false
+    var isLooping = false
+    var timer: Timer? = nil
+    @Published var playIndex = 0
     @Published var list : [PlaylistItem] = [PlaylistItem]()
     var activeController : GCDualSenseGamepad? = nil
     

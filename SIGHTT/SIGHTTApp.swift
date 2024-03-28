@@ -18,9 +18,14 @@ struct SIGHTTApp: App {
         .defaultSize(width: 1200, height: 800)
         .commands{
             CommandMenu("Playlist"){
-                Button("Add Current Settings") {}
+                Button("Play Playlist") {
+                    if(!PlaylistManager.shared.playlist.isPlaying){
+                        PlaylistManager.shared.playlist.playList()
+                    }
+                }
                     .keyboardShortcut("a",modifiers: [.command,.shift])
-                Button("Print Playlist Count") {
+                Button("Stop Playlist") {
+                    PlaylistManager.shared.playlist.stopList()
                     PlaylistManager.shared.printCount()
                 }
                 Button("Load Playlist File"){

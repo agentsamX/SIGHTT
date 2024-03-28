@@ -19,6 +19,7 @@
 		AA29892C2BAE1259003527DF /* SIGHTTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29892B2BAE1259003527DF /* SIGHTTUITestsLaunchTests.swift */; };
 		AA46DF042BAE2F810099F1BE /* GCDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46DF032BAE2F810099F1BE /* GCDetailView.swift */; };
 		AA46DF062BAE2F9E0099F1BE /* GCListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46DF052BAE2F9E0099F1BE /* GCListView.swift */; };
+		AA522B182BB5CC1900B4EA72 /* PlaylistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA522B172BB5CC1900B4EA72 /* PlaylistItemView.swift */; };
 		AA87CF482BB0ACEF00964C3A /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = AA87CF472BB0ACEF00964C3A /* Sliders */; };
 		AA87CF4E2BB0ADC200964C3A /* VibrationModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87CF4D2BB0ADC200964C3A /* VibrationModeView.swift */; };
 		AA87CF502BB0B37E00964C3A /* PositionalVibrationModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87CF4F2BB0B37E00964C3A /* PositionalVibrationModeView.swift */; };
@@ -63,6 +64,7 @@
 		AA2989382BAE12A3003527DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AA46DF032BAE2F810099F1BE /* GCDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDetailView.swift; sourceTree = "<group>"; };
 		AA46DF052BAE2F9E0099F1BE /* GCListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCListView.swift; sourceTree = "<group>"; };
+		AA522B172BB5CC1900B4EA72 /* PlaylistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistItemView.swift; sourceTree = "<group>"; };
 		AA87CF4D2BB0ADC200964C3A /* VibrationModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationModeView.swift; sourceTree = "<group>"; };
 		AA87CF4F2BB0B37E00964C3A /* PositionalVibrationModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionalVibrationModeView.swift; sourceTree = "<group>"; };
 		AA87CF532BB0C5EE00964C3A /* PositionalFeedbackModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionalFeedbackModeView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		AA2988FF2BAE1258003527DF = {
 			isa = PBXGroup;
 			children = (
+				AA522B172BB5CC1900B4EA72 /* PlaylistItemView.swift */,
 				AA29890A2BAE1258003527DF /* SIGHTT */,
 				AA29891E2BAE1259003527DF /* SIGHTTTests */,
 				AA2989282BAE1259003527DF /* SIGHTTUITests */,
@@ -323,6 +326,7 @@
 				AA87CF502BB0B37E00964C3A /* PositionalVibrationModeView.swift in Sources */,
 				AA29890C2BAE1258003527DF /* SIGHTTApp.swift in Sources */,
 				AA46DF062BAE2F9E0099F1BE /* GCListView.swift in Sources */,
+				AA522B182BB5CC1900B4EA72 /* PlaylistItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
