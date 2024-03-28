@@ -28,7 +28,8 @@ struct GCDetailView: View {
             }
             .padding(.all)
             VStack{
-                if(controller.physicalInputProfile.className==GCDualSenseGamepad.className()){
+                if(controller.physicalInputProfile is GCDualSenseGamepad){ // make sure this works
+                    let _ = PlaylistManager.shared.playlist.activeController=(controller.physicalInputProfile as! GCDualSenseGamepad) //make sure to handle disconnects
                     Picker("Feedback Mode", selection: $feedbackMode){
                         Text("Simple Feedback").tag(HapticType.feedback)
                         Text("Weapon Feedback").tag(HapticType.weapon)
