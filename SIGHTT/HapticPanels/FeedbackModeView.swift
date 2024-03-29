@@ -8,7 +8,7 @@
 import SwiftUI
 import GameController
 
-struct StartStrengthView: View {
+struct FeedbackModeView: View {
     var controller : GCDualSenseGamepad
     @State var r2StartResist : Float = 0
     @State var r2ResistStrength : Float = 0

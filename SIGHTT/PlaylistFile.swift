@@ -61,9 +61,15 @@ class Playlist: ObservableObject{
         timer?.invalidate()
         isPlaying=false
     }
+    func currentItemID()->UUID?{
+        if(isPlaying){
+            return list[playIndex].id
+        }
+        return nil
+    }
     var id = UUID()
-    var isPlaying = false
-    var isLooping = false
+    @Published var isPlaying = false
+    @Published var isLooping = false
     var timer: Timer? = nil
     @Published var playIndex = 0
     @Published var list : [PlaylistItem] = [PlaylistItem]()
@@ -114,6 +120,24 @@ struct PlaylistItem: Codable, Identifiable{
         case .vibrationPositional:
             controller.rightTrigger.setModeVibration(amplitudes: GCDualSenseAdaptiveTrigger.PositionalAmplitudes(values: (hapticValuesR[0],hapticValuesR[1],hapticValuesR[2],hapticValuesR[3],hapticValuesR[4],hapticValuesR[5],hapticValuesR[6],hapticValuesR[7],hapticValuesR[8],hapticValuesR[9])), frequency: hapticValuesR[10])
         }
+    }
+    init(item: PlaylistItem, newTimer: Float){
+        id=item.id
+        hapticModeL=item.hapticModeL
+        hapticModeR=item.hapticModeR
+        hapticValuesL=item.hapticValuesL
+        hapticValuesR=item.hapticValuesR
+        itemMode=item.itemMode
+        timer=newTimer
+    }
+    init(hapticModeL : HapticType, hapticModeR: HapticType, hapticValuesL: [Float], hapticValuesR:[Float]){
+        id=UUID()
+        self.hapticModeL=hapticModeL
+        self.hapticModeR=hapticModeR
+        self.hapticValuesL=hapticValuesL
+        self.hapticValuesR=hapticValuesR
+        itemMode = .onTimer
+        timer=1.0
     }
     var id = UUID()
     var hapticModeL : HapticType

@@ -9,7 +9,13 @@ import SwiftUI
 import GameController
 
 enum HapticType: String, CaseIterable, Identifiable,Codable {
-    case none, feedback, weapon, vibration, slope, feedbackPositional, vibrationPositional
+    case none="none",
+         feedback="Simple Resistive",
+         weapon="Weapon Feedback",
+         vibration="Vibration",
+         slope="Slope Resistive",
+         feedbackPositional="Positional Resistive",
+         vibrationPositional="Positional Vibration"
     var id: Self { self }
 }
 
@@ -31,12 +37,12 @@ struct GCDetailView: View {
                 if(controller.physicalInputProfile is GCDualSenseGamepad){ // make sure this works
                     let _ = PlaylistManager.shared.playlist.activeController=(controller.physicalInputProfile as! GCDualSenseGamepad) //make sure to handle disconnects
                     Picker("Feedback Mode", selection: $feedbackMode){
-                        Text("Simple Feedback").tag(HapticType.feedback)
-                        Text("Weapon Feedback").tag(HapticType.weapon)
-                        Text("Vibration").tag(HapticType.vibration)
-                        Text("Slope Feedback").tag(HapticType.slope)
-                        Text("Positional Vibration").tag(HapticType.vibrationPositional)
-                        Text("Feedback Positional").tag(HapticType.feedbackPositional)
+                        Text(HapticType.feedback.rawValue).tag(HapticType.feedback)
+                        Text(HapticType.weapon.rawValue).tag(HapticType.weapon)
+                        Text(HapticType.vibration.rawValue).tag(HapticType.vibration)
+                        Text(HapticType.slope.rawValue).tag(HapticType.slope)
+                        Text(HapticType.vibrationPositional.rawValue).tag(HapticType.vibrationPositional)
+                        Text(HapticType.feedbackPositional.rawValue).tag(HapticType.feedbackPositional)
                     }
                     .padding([.top, .leading, .trailing])
                     ScrollView{
@@ -44,7 +50,7 @@ struct GCDetailView: View {
                         case .none:
                             Text("No Feedback Mode Selected")
                         case .feedback:
-                            StartStrengthView(controller: controller.physicalInputProfile as! GCDualSenseGamepad)
+                            FeedbackModeView(controller: controller.physicalInputProfile as! GCDualSenseGamepad)
                         case .weapon:
                             WeaponModeView(controller: controller.physicalInputProfile as! GCDualSenseGamepad)
                         case .vibration:

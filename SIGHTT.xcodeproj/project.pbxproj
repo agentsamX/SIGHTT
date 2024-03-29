@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA096C372BAF8C1900C29777 /* StartStrengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA096C362BAF8C1900C29777 /* StartStrengthView.swift */; };
+		AA096C372BAF8C1900C29777 /* FeedbackModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA096C362BAF8C1900C29777 /* FeedbackModeView.swift */; };
 		AA096C392BAF8EE900C29777 /* WeaponModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA096C382BAF8EE900C29777 /* WeaponModeView.swift */; };
 		AA096C3B2BAF917800C29777 /* SlopeModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA096C3A2BAF917800C29777 /* SlopeModeView.swift */; };
 		AA29890C2BAE1258003527DF /* SIGHTTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA29890B2BAE1258003527DF /* SIGHTTApp.swift */; };
@@ -20,6 +20,7 @@
 		AA46DF042BAE2F810099F1BE /* GCDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46DF032BAE2F810099F1BE /* GCDetailView.swift */; };
 		AA46DF062BAE2F9E0099F1BE /* GCListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA46DF052BAE2F9E0099F1BE /* GCListView.swift */; };
 		AA522B182BB5CC1900B4EA72 /* PlaylistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA522B172BB5CC1900B4EA72 /* PlaylistItemView.swift */; };
+		AA5AD0BB2BB655C900FFF044 /* LoopToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AD0BA2BB655C900FFF044 /* LoopToggle.swift */; };
 		AA87CF482BB0ACEF00964C3A /* Sliders in Frameworks */ = {isa = PBXBuildFile; productRef = AA87CF472BB0ACEF00964C3A /* Sliders */; };
 		AA87CF4E2BB0ADC200964C3A /* VibrationModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87CF4D2BB0ADC200964C3A /* VibrationModeView.swift */; };
 		AA87CF502BB0B37E00964C3A /* PositionalVibrationModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87CF4F2BB0B37E00964C3A /* PositionalVibrationModeView.swift */; };
@@ -47,7 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AA096C362BAF8C1900C29777 /* StartStrengthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartStrengthView.swift; sourceTree = "<group>"; };
+		AA096C362BAF8C1900C29777 /* FeedbackModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackModeView.swift; sourceTree = "<group>"; };
 		AA096C382BAF8EE900C29777 /* WeaponModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponModeView.swift; sourceTree = "<group>"; };
 		AA096C3A2BAF917800C29777 /* SlopeModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlopeModeView.swift; sourceTree = "<group>"; };
 		AA2989082BAE1258003527DF /* SIGHTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIGHTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +66,7 @@
 		AA46DF032BAE2F810099F1BE /* GCDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDetailView.swift; sourceTree = "<group>"; };
 		AA46DF052BAE2F9E0099F1BE /* GCListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCListView.swift; sourceTree = "<group>"; };
 		AA522B172BB5CC1900B4EA72 /* PlaylistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistItemView.swift; sourceTree = "<group>"; };
+		AA5AD0BA2BB655C900FFF044 /* LoopToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopToggle.swift; sourceTree = "<group>"; };
 		AA87CF4D2BB0ADC200964C3A /* VibrationModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationModeView.swift; sourceTree = "<group>"; };
 		AA87CF4F2BB0B37E00964C3A /* PositionalVibrationModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionalVibrationModeView.swift; sourceTree = "<group>"; };
 		AA87CF532BB0C5EE00964C3A /* PositionalFeedbackModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionalFeedbackModeView.swift; sourceTree = "<group>"; };
@@ -102,7 +104,7 @@
 		AA096C352BAF8BF400C29777 /* HapticPanels */ = {
 			isa = PBXGroup;
 			children = (
-				AA096C362BAF8C1900C29777 /* StartStrengthView.swift */,
+				AA096C362BAF8C1900C29777 /* FeedbackModeView.swift */,
 				AA096C382BAF8EE900C29777 /* WeaponModeView.swift */,
 				AA096C3A2BAF917800C29777 /* SlopeModeView.swift */,
 				AA87CF4D2BB0ADC200964C3A /* VibrationModeView.swift */,
@@ -115,7 +117,6 @@
 		AA2988FF2BAE1258003527DF = {
 			isa = PBXGroup;
 			children = (
-				AA522B172BB5CC1900B4EA72 /* PlaylistItemView.swift */,
 				AA29890A2BAE1258003527DF /* SIGHTT */,
 				AA29891E2BAE1259003527DF /* SIGHTTTests */,
 				AA2989282BAE1259003527DF /* SIGHTTUITests */,
@@ -142,12 +143,14 @@
 				AA29890D2BAE1258003527DF /* ContentView.swift */,
 				AA46DF032BAE2F810099F1BE /* GCDetailView.swift */,
 				AA46DF052BAE2F9E0099F1BE /* GCListView.swift */,
+				AA87CF572BB1085200964C3A /* PlaylistFile.swift */,
+				AA87CF5B2BB1186E00964C3A /* PlaylistManager.swift */,
 				AA87CF552BB0CD7D00964C3A /* PlaylistManagerView.swift */,
+				AA522B172BB5CC1900B4EA72 /* PlaylistItemView.swift */,
 				AA2989112BAE1259003527DF /* Assets.xcassets */,
 				AA2989162BAE1259003527DF /* SIGHTT.entitlements */,
 				AA2989132BAE1259003527DF /* Preview Content */,
-				AA87CF572BB1085200964C3A /* PlaylistFile.swift */,
-				AA87CF5B2BB1186E00964C3A /* PlaylistManager.swift */,
+				AA5AD0BA2BB655C900FFF044 /* LoopToggle.swift */,
 			);
 			path = SIGHTT;
 			sourceTree = "<group>";
@@ -315,13 +318,14 @@
 			files = (
 				AA87CF562BB0CD7D00964C3A /* PlaylistManagerView.swift in Sources */,
 				AA87CF542BB0C5EE00964C3A /* PositionalFeedbackModeView.swift in Sources */,
-				AA096C372BAF8C1900C29777 /* StartStrengthView.swift in Sources */,
+				AA096C372BAF8C1900C29777 /* FeedbackModeView.swift in Sources */,
 				AA87CF582BB1085200964C3A /* PlaylistFile.swift in Sources */,
 				AA096C3B2BAF917800C29777 /* SlopeModeView.swift in Sources */,
 				AA29890E2BAE1258003527DF /* ContentView.swift in Sources */,
 				AA46DF042BAE2F810099F1BE /* GCDetailView.swift in Sources */,
 				AA87CF4E2BB0ADC200964C3A /* VibrationModeView.swift in Sources */,
 				AA87CF5C2BB1186E00964C3A /* PlaylistManager.swift in Sources */,
+				AA5AD0BB2BB655C900FFF044 /* LoopToggle.swift in Sources */,
 				AA096C392BAF8EE900C29777 /* WeaponModeView.swift in Sources */,
 				AA87CF502BB0B37E00964C3A /* PositionalVibrationModeView.swift in Sources */,
 				AA29890C2BAE1258003527DF /* SIGHTTApp.swift in Sources */,
