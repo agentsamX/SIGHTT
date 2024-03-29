@@ -61,6 +61,11 @@ class Playlist: ObservableObject{
         timer?.invalidate()
         isPlaying=false
     }
+    func skipItem(){
+        if (timer?.invalidate() != nil&&isPlaying){
+            playList()
+        }
+    }
     func currentItemID()->UUID?{
         if(isPlaying){
             return list[playIndex].id

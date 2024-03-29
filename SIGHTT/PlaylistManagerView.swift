@@ -13,8 +13,10 @@ struct PlaylistManagerView: View {
         ScrollView{
             ForEach(PlaylistManager.shared.playlist.list){item in
                 PlaylistItemView.init(item: item)
+                    
             }
         }
+        .padding([.top, .leading, .bottom])
     }
 }
 

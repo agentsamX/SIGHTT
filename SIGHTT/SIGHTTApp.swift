@@ -65,10 +65,13 @@ struct SIGHTTApp: App {
                     PlaylistManager.shared.printCount()
                 }.keyboardShortcut("o",modifiers: [.command,.shift])
                 LoopToggle().keyboardShortcut("l",modifiers: [.command,.shift])
+                Button("Skip Current Item") {
+                    PlaylistManager.shared.playlist.skipItem()
+                }.keyboardShortcut("s",modifiers: [.command,.shift])
             }
         }
         Window("Playlist Manager", id:"playlist-manager"){
             PlaylistManagerView()
-        }
+        }.keyboardShortcut("p")
     }
 }
