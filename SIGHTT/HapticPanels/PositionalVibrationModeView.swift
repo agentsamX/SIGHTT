@@ -7,8 +7,6 @@
 
 import SwiftUI
 import GameController
-import Sliders
-
 struct IDFloat: Identifiable {
     var id = UUID()
     var value: Float
@@ -32,36 +30,36 @@ struct PositionalVibrationModeView: View {
 
     
     var body: some View {
-        Text("R2 Vibration Amplitudes")
         HStack{
-            ForEach($r2PositionalAmplitudes){amplitude in
-                ValueSlider(value: amplitude.value, in: 0...1)
-                    .valueSliderStyle(VerticalValueSliderStyle())}
+            VStack{
+                Text("L2 Vibration Amplitudes")
+                ForEach($l2PositionalAmplitudes){amplitude in
+                    Slider(value: amplitude.value, in: 0...1)
+                    }
+                Divider()
+                Text("L2 Vibration Frequency: \(l2VibrationFrequency)")
+                    .foregroundColor(l2VibrationFrequencyChanged ? .red : .blue)
+                Slider(value: $l2VibrationFrequency, in:0...1,onEditingChanged: { editing in
+                    l2VibrationFrequencyChanged=true
+                })
+                
+            } .padding([.bottom, .trailing])
+            Divider()
+            VStack{
+                Text("R2 Vibration Amplitudes")
+                ForEach($r2PositionalAmplitudes){amplitude in
+                    Slider(value: amplitude.value, in: 0...1)
+                    }
+                Divider()
+                Text("R2 Vibration Frequency: \(r2VibrationFrequency)")
+                    .foregroundColor(r2VibrationFrequencyChanged ? .red : .blue)
+                Slider(value: $r2VibrationFrequency, in:0...1,onEditingChanged: { editing in
+                    r2VibrationFrequencyChanged=true
+                })
+                
+            } .padding([.bottom, .leading])
         }
-        .padding([.bottom, .trailing])
-        .frame(height: 120)
-        Slider(value: $r2VibrationFrequency, in:0...1,onEditingChanged: { editing in
-            r2VibrationFrequencyChanged=true
-        })
-        .padding(.trailing)
-        Text("R2 Vibration Frequency: \(r2VibrationFrequency)")
-            .foregroundColor(r2VibrationFrequencyChanged ? .red : .blue)
-        Divider()
-            .padding(.vertical)
-        Text("L2 Vibration Amplitudes")
-        HStack{
-            ForEach($l2PositionalAmplitudes){amplitude in
-                ValueSlider(value: amplitude.value, in: 0...1)
-                    .valueSliderStyle(VerticalValueSliderStyle())}
-        }
-        .padding([.bottom, .trailing])
-        .frame(height: 120)
-        Slider(value: $l2VibrationFrequency, in:0...1,onEditingChanged: { editing in
-            l2VibrationFrequencyChanged=true
-        })
-        .padding(.trailing)
-        Text("L2 Vibration Frequency: \(l2VibrationFrequency)")
-            .foregroundColor(l2VibrationFrequencyChanged ? .red : .blue)
+        .padding([.leading, .trailing])
         Divider()
             .padding(.vertical)
         HStack(){

@@ -23,24 +23,20 @@ struct PositionalFeedbackModeView: View {
 
     
     var body: some View {
-        Text("R2 Resistive Strengths")
         HStack{
-            ForEach($r2PositionalStrengths){amplitude in
-                ValueSlider(value: amplitude.value, in: 0...1)
-                    .valueSliderStyle(VerticalValueSliderStyle())}
+            VStack{
+                Text("L2 Resistive Strengths")
+                ForEach($l2PositionalStrengths){amplitude in
+                    Slider(value: amplitude.value, in: 0...1)}
+            }.padding([.trailing])
+            Divider()
+            VStack{
+                Text("R2 Resistive Strengths")
+                ForEach($r2PositionalStrengths){amplitude in
+                    Slider(value: amplitude.value, in: 0...1)}
+            }.padding([.trailing])
         }
-        .padding([.bottom, .trailing])
-        .frame(height: 120)
-        Divider()
-            .padding(.vertical)
-        Text("L2 Resistive Strengths")
-        HStack{
-            ForEach($l2PositionalStrengths){amplitude in
-                ValueSlider(value: amplitude.value, in: 0...1)
-                    .valueSliderStyle(VerticalValueSliderStyle())}
-        }
-        .padding([.bottom, .trailing])
-        .frame(height: 120)
+        .padding([.bottom, .trailing,.leading])
         Divider()
             .padding(.vertical)
         HStack(){
