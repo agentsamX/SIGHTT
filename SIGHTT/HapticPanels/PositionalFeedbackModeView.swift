@@ -7,7 +7,6 @@
 
 import SwiftUI
 import GameController
-import Sliders
 
 struct PositionalFeedbackModeView: View {
     var controller : GCDualSenseGamepad
