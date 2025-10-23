@@ -51,6 +51,7 @@ struct WeaponModeView: View {
             l2EndResistChanged=true
         })
         Text("L2 Resistance End Point: \(l2EndResist)")
+            .foregroundColor(l2EndResistChanged ? .red : .blue)
         Slider(value: $l2ResistStrength, in:0...1,onEditingChanged: { editing in
             l2ResistStrengthChanged=true
         })
